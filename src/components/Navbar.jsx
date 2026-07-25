@@ -116,44 +116,6 @@ export default function Navbar({ cartCount, onOpenOrderModal, onOpenReservationM
 
           {/* Actions */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <button 
-              onClick={onOpenReservationModal} 
-              className="btn-outline mobile-reservation-btn"
-              style={{ padding: '0.6rem 1.1rem', fontSize: '0.875rem' }}
-            >
-              <Calendar size={18} />
-              <span style={{ display: 'none', smDisplay: 'inline' }}>Masa Rezerve Et</span>
-            </button>
-
-            <button 
-              onClick={onOpenOrderModal} 
-              className="btn-primary nav-order-btn"
-              style={{ padding: '0.55rem 1.1rem', fontSize: '0.875rem', position: 'relative', whiteSpace: 'nowrap' }}
-            >
-              <ShoppingBag size={16} />
-              <span style={{ whiteSpace: 'nowrap' }}>Sipariş Ver</span>
-              {cartCount > 0 && (
-                <span style={{
-                  position: 'absolute',
-                  top: '-5px',
-                  right: '-5px',
-                  backgroundColor: 'var(--color-secondary)',
-                  color: '#FFF',
-                  width: '18px',
-                  height: '18px',
-                  borderRadius: '50%',
-                  fontSize: '0.7rem',
-                  fontWeight: 700,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  boxShadow: '0 2px 6px rgba(0,0,0,0.3)'
-                }}>
-                  {cartCount}
-                </span>
-              )}
-            </button>
-
             {/* Mobile menu button */}
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -167,7 +129,7 @@ export default function Navbar({ cartCount, onOpenOrderModal, onOpenReservationM
               className="mobile-toggle"
               aria-label="Menüyü Aç/Kapat"
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
         </div>

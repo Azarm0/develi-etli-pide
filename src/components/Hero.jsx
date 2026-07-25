@@ -67,9 +67,7 @@ export default function Hero({ onOpenOrderModal, onOpenReservationModal }) {
               marginBottom: '1.75rem'
             }}>
               <div className="glass-card" style={{ padding: '0.5rem 0.9rem', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <div style={{ background: '#FEF3C7', padding: '0.3rem', borderRadius: '50%' }}>
-                  <Star size={18} color="#D97706" fill="#D97706" />
-                </div>
+                <Star size={20} color="#D97706" fill="#D97706" />
                 <div>
                   <div style={{ fontWeight: 700, fontSize: '0.875rem', lineHeight: 1.1 }}>{restaurantInfo.rating} / 5.0</div>
                   <div style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)' }}>{restaurantInfo.reviewCount} Yorum</div>
@@ -77,9 +75,7 @@ export default function Hero({ onOpenOrderModal, onOpenReservationModal }) {
               </div>
 
               <div className="glass-card" style={{ padding: '0.5rem 0.9rem', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <div style={{ background: '#FFEDD5', padding: '0.3rem', borderRadius: '50%' }}>
-                  <Flame size={18} color="var(--color-primary)" />
-                </div>
+                <Flame size={20} color="var(--color-primary)" />
                 <div>
                   <div style={{ fontWeight: 700, fontSize: '0.875rem', lineHeight: 1.1 }}>100% Odun Ateşi</div>
                   <div style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)' }}>Meşe Odunu</div>
