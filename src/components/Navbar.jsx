@@ -127,22 +127,22 @@ export default function Navbar({ cartCount, onOpenOrderModal, onOpenReservationM
 
             <button 
               onClick={onOpenOrderModal} 
-              className="btn-primary"
-              style={{ padding: '0.6rem 1.25rem', fontSize: '0.875rem', position: 'relative' }}
+              className="btn-primary nav-order-btn"
+              style={{ padding: '0.55rem 1.1rem', fontSize: '0.875rem', position: 'relative', whiteSpace: 'nowrap' }}
             >
-              <ShoppingBag size={18} />
-              <span>Sipariş Ver</span>
+              <ShoppingBag size={16} />
+              <span style={{ whiteSpace: 'nowrap' }}>Sipariş Ver</span>
               {cartCount > 0 && (
                 <span style={{
                   position: 'absolute',
-                  top: '-6px',
-                  right: '-6px',
+                  top: '-5px',
+                  right: '-5px',
                   backgroundColor: 'var(--color-secondary)',
                   color: '#FFF',
-                  width: '20px',
-                  height: '20px',
+                  width: '18px',
+                  height: '18px',
                   borderRadius: '50%',
-                  fontSize: '0.75rem',
+                  fontSize: '0.7rem',
                   fontWeight: 700,
                   display: 'flex',
                   alignItems: 'center',
@@ -165,31 +165,29 @@ export default function Navbar({ cartCount, onOpenOrderModal, onOpenReservationM
                 justifyContent: 'center'
               }}
               className="mobile-toggle"
+              aria-label="Menüyü Aç/Kapat"
             >
-              {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu Drawer */}
-        {mobileMenuOpen && (
+        {/* Mobile Menu Drawer (Animated) */}
+        <div className={`mobile-menu-drawer ${mobileMenuOpen ? 'open' : ''}`}>
           <div style={{
-            background: 'var(--color-bg-card)',
-            borderTop: '1px solid var(--color-border)',
             padding: '1.25rem 1.5rem',
             display: 'flex',
             flexDirection: 'column',
-            gap: '1rem',
-            boxShadow: 'var(--shadow-lg)'
+            gap: '1rem'
           }}>
-            <a href="#hero" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.1rem' }}>Ana Sayfa</a>
-            <a href="#heritage" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.1rem' }}>Hikayemiz</a>
-            <a href="#menu" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.1rem' }}>Menümüz & Fiyatlar</a>
-            <a href="#gallery" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.1rem' }}>Fotoğraf Galerisi</a>
-            <a href="#reviews" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.1rem' }}>Müşteri Yorumları</a>
-            <a href="#location" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.1rem' }}>Konum & İletişim</a>
+            <a href="#hero" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.05rem' }}>Ana Sayfa</a>
+            <a href="#heritage" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.05rem' }}>Hikayemiz</a>
+            <a href="#menu" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.05rem' }}>Menümüz & Fiyatlar</a>
+            <a href="#gallery" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.05rem' }}>Fotoğraf Galerisi</a>
+            <a href="#reviews" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.05rem' }}>Müşteri Yorumları</a>
+            <a href="#location" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: 600, fontSize: '1.05rem' }}>Konum & İletişim</a>
           </div>
-        )}
+        </div>
       </nav>
 
       <style>{`

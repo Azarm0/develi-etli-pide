@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Trash2, Plus, Minus, Send, ShoppingBag, MapPin, Phone } from 'lucide-react';
+import { X, Trash2, Plus, Minus, Send, ShoppingBag, MapPin, Phone, UtensilsCrossed } from 'lucide-react';
 import { restaurantInfo } from '../data/restaurantData';
 
 export default function OrderModal({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem, onClearCart }) {
@@ -87,10 +87,25 @@ export default function OrderModal({ isOpen, onClose, cartItems, onUpdateQuantit
         <div style={{ padding: '1.5rem', overflowY: 'auto', flex: 1 }}>
           
           {cartItems.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '3rem 1rem', color: 'var(--color-text-muted)' }}>
+            <div style={{ textAlign: 'center', padding: '3rem 1rem', color: 'var(--color-text-muted)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <ShoppingBag size={48} color="var(--color-border)" style={{ marginBottom: '1rem' }} />
-              <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--pr-stone-800)' }}>Sipariş Sepetiniz Boş</h4>
-              <p style={{ fontSize: '0.9rem' }}>Menümüzden dilediğiniz pideleri siparişinize ekleyerek doğrudan WhatsApp üzerinden gönderebilirsiniz.</p>
+              <h4 style={{ fontSize: '1.15rem', marginBottom: '0.5rem', color: 'var(--pr-stone-800)', fontWeight: 700 }}>Sepetiniz Henüz Boş</h4>
+              <p style={{ fontSize: '0.9rem', maxWidth: '360px', lineHeight: 1.5, marginBottom: '1.25rem' }}>
+                Leziz pidelerimizi ve özel tatlarımızı inceleyip sepetinize ekleyerek doğrudan WhatsApp üzerinden sipariş gönderebilirsiniz.
+              </p>
+              <button 
+                onClick={() => {
+                  onClose();
+                  setTimeout(() => {
+                    document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 120);
+                }}
+                className="btn-primary"
+                style={{ padding: '0.75rem 1.5rem', fontSize: '0.95rem' }}
+              >
+                <UtensilsCrossed size={18} />
+                Menüyü İncele & Lezzet Ekle
+              </button>
             </div>
           ) : (
             <div>
