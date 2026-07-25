@@ -61,6 +61,13 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  position: relative;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: var(--font-body);
@@ -265,20 +272,21 @@ button {
   }
 
   #hero {
-    padding: 2rem 0 2.5rem 0 !important;
+    padding: 1.5rem 0 2rem 0 !important;
   }
 
   .hero-grid {
     grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
+    gap: 1.25rem !important;
   }
 
   .hero-heading {
-    font-size: 2.1rem !important;
+    font-size: 1.75rem !important;
+    margin-bottom: 0.75rem !important;
   }
 
   .hero-img {
-    height: 250px !important;
+    height: 180px !important;
   }
 
   .hero-floating-card {
@@ -286,24 +294,45 @@ button {
   }
 
   .section-title {
-    font-size: 1.75rem !important;
+    font-size: 1.5rem !important;
   }
 
   .section-subtitle {
-    font-size: 0.95rem !important;
+    font-size: 0.9rem !important;
   }
 
   .container {
-    padding: 0 1rem !important;
+    padding: 0 0.85rem !important;
   }
 
   /* Compact Menu & Category Filters on Mobile */
   .category-filter-bar {
+    display: flex !important;
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
     justify-content: flex-start !important;
     padding-bottom: 0.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .category-filter-bar::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .menu-item-img-container {
+    height: 140px !important;
+  }
+
+  .mobile-reservation-btn {
+    display: none !important;
   }
 }
 

@@ -118,7 +118,7 @@ export default function Navbar({ cartCount, onOpenOrderModal, onOpenReservationM
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <button 
               onClick={onOpenReservationModal} 
-              className="btn-outline"
+              className="btn-outline mobile-reservation-btn"
               style={{ padding: '0.6rem 1.1rem', fontSize: '0.875rem' }}
             >
               <Calendar size={18} />
