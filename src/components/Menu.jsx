@@ -83,7 +83,7 @@ export default function Menu({ onAddToCart, cartItems }) {
           </div>
 
           {/* Category Filter Pills */}
-          <div style={{
+          <div className="category-filter-bar" style={{
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'center',

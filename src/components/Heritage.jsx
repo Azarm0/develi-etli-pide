@@ -86,7 +86,7 @@ export default function Heritage() {
               2. Meşe Odunu Taş Fırın
             </h3>
             <p style={{ color: 'var(--color-text-muted)', fontSize: '0.975rem' }}>
-              Ppidelerimiz sadece doğal meşe odunu ile ısıtılan geleneksel kubbeli taş fırınımızda yüksek dereceli ısıda dakikalar içinde çıtır çıtır pişirilir.
+              Pidelerimiz sadece doğal meşe odunu ile ısıtılan geleneksel kubbeli taş fırınımızda yüksek dereceli ısıda dakikalar içinde çıtır çıtır pişirilir.
             </p>
           </div>
 

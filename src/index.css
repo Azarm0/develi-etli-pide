@@ -257,3 +257,53 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--pr-terracotta-900);
 }
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 768px) {
+  .top-notification-bar {
+    display: none !important;
+  }
+
+  #hero {
+    padding: 2rem 0 2.5rem 0 !important;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .hero-heading {
+    font-size: 2.1rem !important;
+  }
+
+  .hero-img {
+    height: 250px !important;
+  }
+
+  .hero-floating-card {
+    display: none !important;
+  }
+
+  .section-title {
+    font-size: 1.75rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem !important;
+  }
+
+  .container {
+    padding: 0 1rem !important;
+  }
+
+  /* Compact Menu & Category Filters on Mobile */
+  .category-filter-bar {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    justify-content: flex-start !important;
+    padding-bottom: 0.5rem !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+

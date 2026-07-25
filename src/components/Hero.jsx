@@ -23,23 +23,21 @@ export default function Hero({ onOpenOrderModal, onOpenReservationModal }) {
       }} />
 
       <div className="container">
-        <div style={{
+        <div className="hero-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-          gap: '3.5rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '2.5rem',
           alignItems: 'center'
         }}>
           
           {/* Left Hero Column */}
           <div>
-
-
-            <h1 style={{
-              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+            <h1 className="hero-heading" style={{
+              fontSize: 'clamp(2rem, 5vw, 3.8rem)',
               fontWeight: 800,
               color: 'var(--pr-stone-900)',
               lineHeight: 1.15,
-              marginBottom: '1.25rem'
+              marginBottom: '1rem'
             }}>
               Odun Ateşinde Taş Fırından <br />
               <span style={{
@@ -52,10 +50,11 @@ export default function Hero({ onOpenOrderModal, onOpenReservationModal }) {
             </h1>
 
             <p style={{
-              fontSize: '1.2rem',
+              fontSize: '1.05rem',
               color: 'var(--color-text-muted)',
-              marginBottom: '2rem',
-              maxWidth: '560px'
+              marginBottom: '1.5rem',
+              maxWidth: '560px',
+              lineHeight: 1.5
             }}>
               Zırh zırh doğranmış özel etler, domates ve biber harcıyla incecik taş fırın hamurunda pişen asırlık Kayseri Develi lezzeti. Zeytinburnu Veliefendi salonumuzda taptaze sunuluyor.
             </p>
@@ -64,105 +63,104 @@ export default function Hero({ onOpenOrderModal, onOpenReservationModal }) {
             <div style={{
               display: 'flex',
               flexWrap: 'wrap',
-              gap: '1.25rem',
-              marginBottom: '2.5rem'
+              gap: '0.85rem',
+              marginBottom: '1.75rem'
             }}>
-              <div className="glass-card" style={{ padding: '0.6rem 1.1rem', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <div style={{ background: '#FEF3C7', padding: '0.35rem', borderRadius: '50%' }}>
-                  <Star size={20} color="#D97706" fill="#D97706" />
+              <div className="glass-card" style={{ padding: '0.5rem 0.9rem', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div style={{ background: '#FEF3C7', padding: '0.3rem', borderRadius: '50%' }}>
+                  <Star size={18} color="#D97706" fill="#D97706" />
                 </div>
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '0.95rem', lineHeight: 1.1 }}>{restaurantInfo.rating} / 5.0</div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>{restaurantInfo.reviewCount} Doğrulanmış Yorum</div>
+                  <div style={{ fontWeight: 700, fontSize: '0.875rem', lineHeight: 1.1 }}>{restaurantInfo.rating} / 5.0</div>
+                  <div style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)' }}>{restaurantInfo.reviewCount} Yorum</div>
                 </div>
               </div>
 
-              <div className="glass-card" style={{ padding: '0.6rem 1.1rem', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <div style={{ background: '#FFEDD5', padding: '0.35rem', borderRadius: '50%' }}>
-                  <Flame size={20} color="var(--color-primary)" />
+              <div className="glass-card" style={{ padding: '0.5rem 0.9rem', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div style={{ background: '#FFEDD5', padding: '0.3rem', borderRadius: '50%' }}>
+                  <Flame size={18} color="var(--color-primary)" />
                 </div>
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '0.95rem', lineHeight: 1.1 }}>100% Odun Ateşi</div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>Geleneksel Meşe Odunu</div>
+                  <div style={{ fontWeight: 700, fontSize: '0.875rem', lineHeight: 1.1 }}>100% Odun Ateşi</div>
+                  <div style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)' }}>Meşe Odunu</div>
                 </div>
               </div>
             </div>
 
             {/* CTAs */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-              <button onClick={onOpenOrderModal} className="btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.05rem' }}>
-                <ShoppingBag size={22} />
-                Hemen Sipariş Ver
-                <ChevronRight size={20} />
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+              <button onClick={onOpenOrderModal} className="btn-primary" style={{ padding: '0.85rem 1.6rem', fontSize: '0.975rem' }}>
+                <ShoppingBag size={20} />
+                Sipariş Ver
+                <ChevronRight size={18} />
               </button>
 
-              <button onClick={onOpenReservationModal} className="btn-secondary" style={{ padding: '1rem 1.75rem', fontSize: '1.05rem' }}>
+              <button onClick={onOpenReservationModal} className="btn-secondary" style={{ padding: '0.85rem 1.4rem', fontSize: '0.975rem' }}>
                 Masa Rezerve Et
               </button>
             </div>
           </div>
 
-          {/* Right Hero Visual Column (Featuring Real Scraped Google Maps Photo) */}
-          <div style={{ position: 'relative' }}>
-            <div style={{
+          {/* Right Hero Visual Column */}
+          <div className="hero-image-col" style={{ position: 'relative' }}>
+            <div className="hero-image-card" style={{
               position: 'relative',
               borderRadius: 'var(--radius-lg)',
               overflow: 'hidden',
               boxShadow: 'var(--shadow-lg)',
-              border: '4px solid #FFFFFF'
+              border: '3px solid #FFFFFF'
             }}>
               <img 
                 src="gallery/develi_civiklisi_hero.jpg" 
                 alt="Meşhur Develi Cıvıklısı Taş Fırın Pidesi" 
+                className="hero-img"
                 style={{
                   width: '100%',
-                  height: '460px',
                   objectFit: 'cover',
-                  display: 'block',
-                  transition: 'transform 0.5s ease'
+                  display: 'block'
                 }}
               />
               <div style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(to top, rgba(15, 12, 10, 0.92) 0%, rgba(15, 12, 10, 0.4) 50%, rgba(0,0,0,0) 100%)',
+                background: 'linear-gradient(to top, rgba(15, 12, 10, 0.92) 0%, rgba(15, 12, 10, 0.3) 50%, rgba(0,0,0,0) 100%)',
                 display: 'flex',
                 alignItems: 'flex-end',
-                padding: '2rem 1.75rem 2.25rem 1.75rem'
+                padding: '1.25rem'
               }}>
                 <div style={{ color: '#FFF', position: 'relative', zIndex: 2 }}>
                   <div style={{
-                    fontSize: '0.85rem',
+                    fontSize: '0.75rem',
                     textTransform: 'uppercase',
                     letterSpacing: '0.1em',
                     color: 'var(--color-accent)',
                     fontWeight: 700,
-                    marginBottom: '0.35rem'
+                    marginBottom: '0.2rem'
                   }}>
                     Günün Tavsiyesi
                   </div>
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#FFF', marginBottom: '0.4rem', textShadow: '0 2px 4px rgba(0,0,0,0.6)' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#FFF', marginBottom: '0.25rem', textShadow: '0 2px 4px rgba(0,0,0,0.6)' }}>
                     Meşhur Develi Cıvıklısı (Zırh Kuşbaşılı)
                   </h3>
-                  <p style={{ fontSize: '0.925rem', color: '#F5EFEB', textShadow: '0 1px 3px rgba(0,0,0,0.6)' }}>
+                  <p style={{ fontSize: '0.85rem', color: '#F5EFEB', textShadow: '0 1px 3px rgba(0,0,0,0.6)' }}>
                     Taş fırından yeni çıkmış çıtır hamuru ve nefis aromasıyla.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Floating Card Overlay (Positioned cleanly at top right to avoid covering hero text) */}
-            <div className="glass-card" style={{
+            {/* Floating Card Overlay */}
+            <div className="glass-card hero-floating-card" style={{
               position: 'absolute',
-              top: '20px',
-              right: '-20px',
-              padding: '0.85rem 1.1rem',
+              top: '15px',
+              right: '15px',
+              padding: '0.65rem 0.9rem',
               borderRadius: 'var(--radius-md)',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.75rem',
+              gap: '0.6rem',
               boxShadow: 'var(--shadow-lg)',
-              maxWidth: '250px',
+              maxWidth: '220px',
               zIndex: 10
             }}>
               <div style={{

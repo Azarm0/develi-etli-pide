@@ -20,8 +20,8 @@ export default function Navbar({ cartCount, onOpenOrderModal, onOpenReservationM
 
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 100, transition: 'all 0.3s ease' }}>
-      {/* Top Notification Bar */}
-      <div style={{
+      {/* Top Notification Bar (Hidden on Mobile) */}
+      <div className="top-notification-bar" style={{
         backgroundColor: 'var(--pr-stone-900)',
         color: '#D6D3D1',
         fontSize: '0.8125rem',
@@ -41,7 +41,6 @@ export default function Navbar({ cartCount, onOpenOrderModal, onOpenReservationM
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-
             <a href={`tel:${restaurantInfo.phone.replace(/[^0-9]/g, '')}`} style={{
               display: 'flex',
               alignItems: 'center',
