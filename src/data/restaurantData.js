@@ -1,22 +1,33 @@
-// Authentic Restaurant Data for Develi Etli Pide & Taş Fırın Salonu (Zeytinburnu)
+// CONCEPT PAGE DATA. The contact details below are placeholders, not real.
+//
+// This site was built as an unsolicited pitch. The restaurant it is modelled on
+// has not commissioned it, has not approved it and does not know it exists, so
+// nothing here may be a working way to reach them or to find them: no real
+// phone number, no street address, no Plus Code, no Google Maps embed pinned to
+// their listing. The rating and review count were scraped from that listing and
+// are gone for the same reason.
+//
+// The phone number uses the Turkish 555 reserve range, which never routes to a
+// person. Same convention as `mikron-teknik/src/data/icerik.js` and
+// `mevcut-digital/src/data/vitrin.ts`.
 
 export const restaurantInfo = {
   name: "Develi Etli Pide & Taş Fırın Salonu",
   subtitle: "Zırhtan Fırına Asırlık Kayseri Lezzeti",
-  rating: 4.6,
-  reviewCount: "120+",
-  address: "Veliefendi, 74. Sk. 14-26c, 34025 Zeytinburnu / İstanbul",
-  addressDetail: "Zeytinburnu Kültür ve Sanat Merkezi Yakını, Veliefendi Mahallesi",
-  phone: "(0212) 664 95 40",
-  whatsappPhone: "902126649540",
+  address: "Zeytinburnu / İstanbul",
+  addressDetail: "Örnek konum bilgisidir",
+  phone: "(0212) 555 01 84",
+  whatsappPhone: "902125550184",
   workingHours: {
     weekdays: "10:00 - 22:00",
     saturday: "10:00 - 22:00",
     sunday: "11:00 - 21:30"
   },
   isOpenNow: true,
-  plusCode: "XWV2+RM Zeytinburnu, İstanbul",
-  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.666491753995!2d28.9016609!3d40.9946168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb0a446a7017%3A0x8ad52900376fce49!2sDeveli%20Etli%20Pide!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+
+  // Sample figures, not the restaurant's real Google rating.
+  rating: 4.7,
+  reviewCount: "40+"
 };
 
 export const menuCategories = [
@@ -147,37 +158,40 @@ export const galleryPhotos = [
   { id: 15, src: "gallery/gmaps_real_25.jpg", title: "Develi Pide Gece Görünümü", category: "Restoran" }
 ];
 
+// SAMPLE REVIEWS. Invented names, invented comments, written to show the layout.
+// These were previously labelled as verified Google Maps reviews of a real
+// restaurant that never agreed to appear here. Do not repopulate from a scrape.
 export const customerReviews = [
   {
     id: 1,
-    name: "Ahmet Yılmaz",
+    name: "A. Y.",
     rating: 5,
-    date: "1 hafta önce",
-    comment: "Kayseri'ye gitmiş kadar olduk! Taş fırından çıkan Develi Cıvıklısı'nın hamuru pamuk gibi ve kenarları çıtır çıtır. Zırh etinin lezzeti harika. Zeytinburnu'ndaki en iyi pideci.",
-    source: "Google Haritalar Doğrulanmış Müşteri"
+    date: "Örnek yorum",
+    comment: "Hamuru ince, kenarları çıtır çıtır geldi. Sıcak servis edilmesi de fark yaratıyor.",
+    source: "Örnek müşteri yorumu"
   },
   {
     id: 2,
-    name: "Selin Şahin",
+    name: "S. Ş.",
     rating: 5,
-    date: "2 hafta önce",
-    comment: "Tahinli ve cevizli pideyi mutlaka ama mutlaka deneyin. Yemek sonrası mükemmel bir tatlı seçeneği. Aile ortamı çok temiz ve çalışanlar çok güler yüzlü.",
-    source: "Google Haritalar Doğrulanmış Müşteri"
+    date: "Örnek yorum",
+    comment: "Tatlı olarak tahinli pideyi denedik, yemek sonrası için iyi bir seçim. Salon temizdi.",
+    source: "Örnek müşteri yorumu"
   },
   {
     id: 3,
-    name: "Murat Demir",
+    name: "M. D.",
     rating: 5,
-    date: "1 ay önce",
-    comment: "Paket siparişim fırından yeni çıkmış gibi sıcacık ve çıtırlığını kaybetmeden geldi. Peynirli pide ve mercimek çorbası çok başarılıydı. Teşekkürler!",
-    source: "Google Haritalar Doğrulanmış Müşteri"
+    date: "Örnek yorum",
+    comment: "Paket siparişte çıtırlığını kaybetmemişti. Çorba da yanında sıcak geldi.",
+    source: "Örnek müşteri yorumu"
   },
   {
     id: 4,
-    name: "Hakan Öztürk",
-    rating: 5,
-    date: "2 ay önce",
-    comment: "Gerçek odun ateşinde taş fırın lezzeti. Malzemeden hiç kaçınmamışlar, etlerin kokusu ve tazeliği mükemmel. Fiyatlar lezzete göre gayet makul.",
-    source: "Google Haritalar Doğrulanmış Müşteri"
+    name: "H. Ö.",
+    rating: 4,
+    date: "Örnek yorum",
+    comment: "Akşam saatlerinde biraz beklemek gerekti ama pidenin lezzeti beklemeye değdi.",
+    source: "Örnek müşteri yorumu"
   }
 ];

@@ -22,7 +22,7 @@ export default function LocationFooter() {
             Bizi Ziyaret Edin veya <span style={{ color: 'var(--color-accent)' }}>Sipariş Verin</span>
           </h2>
           <p className="section-subtitle" style={{ color: '#A8A29E', margin: '0 auto' }}>
-            Zeytinburnu Veliefendi Mahallesi'nde yer alan salonumuzda taze taş fırın lezzetlerimizle hizmetinizdeyiz.
+            Zeytinburnu'daki salonumuzda taze taş fırın lezzetlerimizle hizmetinizdeyiz.
           </p>
         </div>
 
@@ -102,17 +102,14 @@ export default function LocationFooter() {
 
             {/* Direct Action Buttons */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-              <a 
-                href={`https://www.google.com/maps/dir/?api=1&destination=Develi+Etli+Pide+Zeytinburnu`} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              {/* No directions link: it routed to the real restaurant. */}
+              <span
                 className="btn-primary"
-                style={{ width: '100%', padding: '0.85rem', fontSize: '0.95rem' }}
+                style={{ width: '100%', padding: '0.85rem', fontSize: '0.95rem', opacity: 0.55, cursor: 'default' }}
               >
                 <Navigation size={18} />
-                Yol Tarifi Al (Google Haritalar)
-                <ExternalLink size={16} />
-              </a>
+                Yol tarifi konsept sürümde kapalı
+              </span>
 
               <a 
                 href={`https://wa.me/${restaurantInfo.whatsappPhone}`}
@@ -128,24 +125,25 @@ export default function LocationFooter() {
 
           </div>
 
-          {/* Interactive Google Maps Embed Frame */}
+          {/* Map placeholder. The embed here was pinned to the restaurant's real
+              Google listing on a page they never approved, and it shipped
+              third-party cookies to every visitor. */}
           <div style={{
             borderRadius: 'var(--radius-lg)',
             overflow: 'hidden',
             boxShadow: 'var(--shadow-lg)',
             border: '2px solid rgba(217, 119, 6, 0.3)',
-            minHeight: '380px'
+            minHeight: '380px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'rgba(255, 255, 255, 0.04)',
+            padding: '2rem',
+            textAlign: 'center'
           }}>
-            <iframe 
-              title="Develi Etli Pide Google Haritalar Konumu"
-              src={restaurantInfo.googleMapsEmbedUrl} 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0, minHeight: '380px' }} 
-              allowFullScreen="" 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            <span style={{ fontSize: '0.85rem', color: '#A8A29E', lineHeight: 1.6 }}>
+              Konum haritası konsept sürümde gösterilmiyor
+            </span>
           </div>
 
         </div>
@@ -166,7 +164,7 @@ export default function LocationFooter() {
             © {new Date().getFullYear()} {restaurantInfo.name}. Tüm hakları saklıdır.
           </div>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <span>Zeytinburnu Veliefendi Mah.</span>
+            <span>Zeytinburnu, İstanbul</span>
             <span>Tel: {restaurantInfo.phone}</span>
           </div>
         </div>

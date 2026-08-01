@@ -44,7 +44,7 @@ export default function Reviews() {
               ))}
             </div>
             <div style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', fontWeight: 600 }}>
-              Google Doğrulanmış {restaurantInfo.reviewCount} Değerlendirme
+              Örnek değerlendirme verisi ({restaurantInfo.reviewCount})
             </div>
           </div>
         </div>

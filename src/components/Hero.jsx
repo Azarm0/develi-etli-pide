@@ -56,7 +56,7 @@ export default function Hero({ onOpenOrderModal, onOpenReservationModal }) {
               maxWidth: '560px',
               lineHeight: 1.5
             }}>
-              Zırh zırh doğranmış özel etler, domates ve biber harcıyla incecik taş fırın hamurunda pişen asırlık Kayseri Develi lezzeti. Zeytinburnu Veliefendi salonumuzda taptaze sunuluyor.
+              Zırh zırh doğranmış özel etler, domates ve biber harcıyla incecik taş fırın hamurunda pişen asırlık Kayseri Develi lezzeti. Zeytinburnu'daki salonumuzda taptaze sunuluyor.
             </p>
 
             {/* Badges Grid */}
